@@ -1606,7 +1606,7 @@ export default function ({types: t, template}): Object {
         if (prop.optional) {
           check = t.logicalExpression(
             '||',
-            checks.undefined({input: target}),
+            checks.void({input: target}),
             check
           );
         }
@@ -2998,7 +2998,7 @@ export default function ({types: t, template}): Object {
     if (node.optional) {
       check = t.logicalExpression(
         '||',
-        checks.undefined({input: checkable}),
+        checks.void({input: checkable}),
         check
       );
     }
@@ -3046,7 +3046,7 @@ export default function ({types: t, template}): Object {
     if (node.optional) {
       check = t.logicalExpression(
         '||',
-        checks.undefined({input: id}),
+        checks.void({input: id}),
         check
       );
     }
